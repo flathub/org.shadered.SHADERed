@@ -57,8 +57,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/dfranx/SHADERed.git
-        tag: v1.3.5
-        commit: 0fa71053c1015a093f8f4366341de73d437f63d0
+        tag: v1.4.2
+        commit: 9a74bc18680a661096fa1acfad2a7a9e1b28c930
 
       # AppStream metadata was fixed after SHADERed 1.3.5's release, so download it from a pull request.
       - type: file
