@@ -37,7 +37,7 @@ modules:
 
   - name: glm
     buildsystem: cmake-ninja
-    cleanup: ["*"]
+    no-make-install: true
     sources:
       - type: archive
         url: https://github.com/g-truc/glm/releases/download/0.9.9.8/glm-0.9.9.8.zip
