@@ -61,7 +61,7 @@ modules:
         url: https://github.com/dfranx/SHADERed.git
         tag: v1.4.2
         commit: 9a74bc18680a661096fa1acfad2a7a9e1b28c930
-        
+
       - type: patch
         path: 0001-removed.patch
 	
