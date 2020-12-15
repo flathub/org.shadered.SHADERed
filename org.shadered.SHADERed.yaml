@@ -21,15 +21,6 @@ cleanup:
   - "*.inl"
 
 modules:
-  - name: assimp
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DASSIMP_BUILD_ASSIMP_TOOLS:BOOL=NO
-      - -DASSIMP_BUILD_TESTS:BOOL=NO
-    sources:
-      - type: archive
-        url: https://github.com/assimp/assimp/archive/v5.0.1.tar.gz
-        sha256: 11310ec1f2ad2cd46b95ba88faca8f7aaa1efe9aa12605c55e3de2b977b3dbfc
 
   - shared-modules/glew/glew.json
 
@@ -64,7 +55,7 @@ modules:
 
       - type: patch
         path: 0001-removed.patch
-      
+
       - type: file
         url: https://raw.githubusercontent.com/dfranx/SHADERed/f8469c91767aa07dff3f5352c819968fb000d4c1/Misc/Linux/org.shadered.SHADERed.appdata.xml
         sha256: c7e4f1dd823251e2e8689e36caf5d5117b6e2ebe60ebddc31084929de6cf2b32
@@ -72,5 +63,3 @@ modules:
     build-commands:
       # The icon and `.desktop` file are already installed by CMake, but they need to be renamed.
       - install -Dm644 $FLATPAK_ID.appdata.xml -t /app/share/appdata/
-      
-      
