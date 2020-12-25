@@ -47,18 +47,18 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DCMAKE_MODULE_PATH:PATH=/run/build/glm;
+      # Required for the Flatpak build to succeed.
+      - -DDONT_LINK_FILESYSTEM=1
     sources:
       - type: git
         url: https://github.com/dfranx/SHADERed.git
-        tag: v1.4.2
-        commit: 9a74bc18680a661096fa1acfad2a7a9e1b28c930
+        tag: v1.4.3
+        commit: cd1b6f2a0a07077a7a66e175f127307549d6516e
 
-      - type: patch
-        path: 0001-removed.patch
-
+      # AppStream metadata wasn't updated in the tagged release, so take it from a fork for now.
       - type: file
-        url: https://raw.githubusercontent.com/dfranx/SHADERed/f8469c91767aa07dff3f5352c819968fb000d4c1/Misc/Linux/org.shadered.SHADERed.appdata.xml
-        sha256: c7e4f1dd823251e2e8689e36caf5d5117b6e2ebe60ebddc31084929de6cf2b32
+        url: https://raw.githubusercontent.com/Calinou/SHADERed/42537e1281c8f3dd5e200a27e69d5c4ddef6dfcc/Misc/Linux/org.shadered.SHADERed.appdata.xml
+        sha256: 94d5cdb354d5268f42c781cd56b361af060322ceb9c7c2cd592756c5ed883d07
 
     build-commands:
       # The icon and `.desktop` file are already installed by CMake, but they need to be renamed.
