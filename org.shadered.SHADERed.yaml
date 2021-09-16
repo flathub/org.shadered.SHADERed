@@ -52,13 +52,13 @@ modules:
     sources:
       - type: git
         url: https://github.com/dfranx/SHADERed.git
-        tag: v1.4.3
-        commit: cd1b6f2a0a07077a7a66e175f127307549d6516e
+        tag: v1.5.4
+        commit: 6944cff2f1fc4d4ab72a4f741c2727713acfeb6d
 
       # AppStream metadata wasn't updated in the tagged release, so take it from a fork for now.
       - type: file
-        url: https://raw.githubusercontent.com/Calinou/SHADERed/42537e1281c8f3dd5e200a27e69d5c4ddef6dfcc/Misc/Linux/org.shadered.SHADERed.appdata.xml
-        sha256: 94d5cdb354d5268f42c781cd56b361af060322ceb9c7c2cd592756c5ed883d07
+        url: https://raw.githubusercontent.com/Calinou/SHADERed/a25be75303f38ab3bf7b80513ec2b065d773653d/Misc/Linux/org.shadered.SHADERed.appdata.xml
+        sha256: d5277eaf0b562ec24fff3c8a625d61447aaa5d1552b0b7c42222c667ee8ec9cd
 
     build-commands:
       # The icon and `.desktop` file are already installed by CMake, but they need to be renamed.
