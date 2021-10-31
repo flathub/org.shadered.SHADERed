@@ -1,0 +1,15 @@
+--- shadered/libs/ShaderExpressionParser/Tokenizer.h-orig	2021-10-30 21:58:03.544316454 -0400
++++ shadered/libs/ShaderExpressionParser/Tokenizer.h	2021-10-30 21:58:22.760501871 -0400
+@@ -1,4 +1,5 @@
+ #pragma once
++#include <stddef.h>
+ #include <unordered_map>
+ 
+ namespace expr
+@@ -79,4 +80,4 @@
+         const char* m_buffer;
+         const char* m_bufferEnd;
+ 	};
+-}
+\ No newline at end of file
++}
