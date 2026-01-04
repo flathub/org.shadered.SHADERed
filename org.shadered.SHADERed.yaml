@@ -44,8 +44,8 @@ modules:
       - -DSFML_INSTALL_PKGCONFIG_FILES=TRUE
     sources:
       - type: archive
-        url: https://www.sfml-dev.org/files/SFML-2.5.1-sources.zip
-        sha256: bf1e0643acb92369b24572b703473af60bac82caf5af61e77c063b779471bb7f
+        url: https://github.com/SFML/SFML/archive/refs/tags/2.6.2.tar.gz
+        sha256: 15ff4d608a018f287c6a885db0a2da86ea389e516d2323629e4d4407a7ce047f
 
   - name: shadered
     buildsystem: cmake-ninja
