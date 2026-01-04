@@ -1,0 +1,47 @@
+From f9c44368e0fb6f5b6823e1347fcc1a1b680e00aa Mon Sep 17 00:00:00 2001
+From: Andreas Schultes <andreas.schultes@goolgemail.com>
+Date: Mon, 21 Oct 2024 20:37:14 +0200
+Subject: [PATCH] Add missing std includes
+
+---
+ libs/cppdap/include/dap/any.h     | 1 +
+ libs/cppdap/src/io.cpp            | 1 +
+ src/SHADERed/Engine/AudioPlayer.h | 1 +
+ 3 files changed, 3 insertions(+)
+
+diff --git a/libs/cppdap/include/dap/any.h b/libs/cppdap/include/dap/any.h
+index 187ca5d3..2ca00637 100644
+--- a/libs/cppdap/include/dap/any.h
++++ b/libs/cppdap/include/dap/any.h
+@@ -18,6 +18,7 @@
+ #include "typeinfo.h"
+ 
+ #include <assert.h>
++#include <stdint.h>
+ 
+ namespace dap {
+ 
+diff --git a/libs/cppdap/src/io.cpp b/libs/cppdap/src/io.cpp
+index 3ee972ed..b4133e50 100644
+--- a/libs/cppdap/src/io.cpp
++++ b/libs/cppdap/src/io.cpp
+@@ -21,6 +21,7 @@
+ #include <cstring>  // strlen
+ #include <deque>
+ #include <mutex>
++#include <string>
+ 
+ namespace {
+ 
+diff --git a/src/SHADERed/Engine/AudioPlayer.h b/src/SHADERed/Engine/AudioPlayer.h
+index 70856995..0e2ed8d1 100644
+--- a/src/SHADERed/Engine/AudioPlayer.h
++++ b/src/SHADERed/Engine/AudioPlayer.h
+@@ -2,6 +2,7 @@
+ #include <misc/miniaudio.h>
+ #include <string>
+ #include <string.h>
++#include <stdint.h>
+ 
+ namespace ed {
+ 	namespace eng {

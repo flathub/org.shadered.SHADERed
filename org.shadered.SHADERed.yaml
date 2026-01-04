@@ -1,6 +1,6 @@
 app-id: org.shadered.SHADERed
 runtime: org.freedesktop.Platform
-runtime-version: "21.08"
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 command: shadered
 rename-desktop-file: shadered.desktop
@@ -52,19 +52,15 @@ modules:
     config-opts:
       # Required for the Flatpak build to succeed.
       - -DDONT_LINK_FILESYSTEM=1
+    build-commands:
+      - install -Dm644 $FLATPAK_ID.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: git
         url: https://github.com/dfranx/SHADERed.git
-        tag: v1.5.4
-        commit: 6944cff2f1fc4d4ab72a4f741c2727713acfeb6d
-
-      # AppStream metadata wasn't updated in the tagged release, so take it from a fork for now.
-      - type: file
-        url: https://raw.githubusercontent.com/Calinou/SHADERed/a25be75303f38ab3bf7b80513ec2b065d773653d/Misc/Linux/org.shadered.SHADERed.appdata.xml
-        sha256: d5277eaf0b562ec24fff3c8a625d61447aaa5d1552b0b7c42222c667ee8ec9cd
+        tag: v1.5.6
+        commit: d118369cbc5f18db3596e318c92557760ef0b466
       - type: patch
-        path: shadered-build.patch
-
-    build-commands:
-      # The icon and `.desktop` file are already installed by CMake, but they need to be renamed.
-      - install -Dm644 $FLATPAK_ID.appdata.xml -t /app/share/appdata/
+        path: fix-missing-std-includes.patch
+      # AppStream metadata wasn't updated, so provide it with related patches.
+      - type: file
+        path: org.shadered.SHADERed.metainfo.xml

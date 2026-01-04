@@ -32,7 +32,7 @@ then enter the following commands in a terminal:
 ```bash
 git clone --recursive https://github.com/flathub/org.shadered.SHADERed.git
 cd org.shadered.SHADERed/
-flatpak install --user flathub org.freedesktop.Sdk//19.08 -y
+flatpak install --user flathub org.freedesktop.Sdk//24.08 -y
 flatpak-builder --force-clean --install --user -y builddir org.shadered.SHADERed.yaml
 ```
 
