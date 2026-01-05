@@ -1,6 +1,6 @@
 app-id: org.shadered.SHADERed
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: shadered
 rename-desktop-file: shadered.desktop
@@ -52,6 +52,7 @@ modules:
     config-opts:
       # Required for the Flatpak build to succeed.
       - -DDONT_LINK_FILESYSTEM=1
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     build-commands:
       - install -Dm644 $FLATPAK_ID.metainfo.xml -t /app/share/metainfo/
     sources:
