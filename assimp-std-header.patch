@@ -1,0 +1,25 @@
+diff --git a/code/MMD/MMDPmxParser.h b/code/MMD/MMDPmxParser.h
+index 9c9fb3ad..17517c47 100644
+--- a/code/MMD/MMDPmxParser.h
++++ b/code/MMD/MMDPmxParser.h
+@@ -46,6 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #include <iostream>
+ #include <fstream>
+ #include <memory>
++#include <cstdint>
+ #include "MMDCpp14.h"
+ 
+ namespace pmx
+diff --git a/code/X3D/FIReader.hpp b/code/X3D/FIReader.hpp
+index e8b6c2f3..49e96b9d 100644
+--- a/code/X3D/FIReader.hpp
++++ b/code/X3D/FIReader.hpp
+@@ -56,7 +56,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #include <cwchar>
+ #include <vector>
+ //#include <stdio.h>
+-//#include <cstdint>
++#include <cstdint>
+ #ifdef ASSIMP_USE_HUNTER
+ #  include <irrXML/irrXML.h>
+ #else

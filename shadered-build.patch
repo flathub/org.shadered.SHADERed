@@ -1,15 +1,48 @@
---- shadered/libs/ShaderExpressionParser/Tokenizer.h-orig	2021-10-30 21:58:03.544316454 -0400
-+++ shadered/libs/ShaderExpressionParser/Tokenizer.h	2021-10-30 21:58:22.760501871 -0400
-@@ -1,4 +1,5 @@
- #pragma once
-+#include <stddef.h>
- #include <unordered_map>
+diff --git a/libs/cppdap/include/dap/any.h b/libs/cppdap/include/dap/any.h
+index 187ca5d..2ca0063 100644
+--- a/libs/cppdap/include/dap/any.h
++++ b/libs/cppdap/include/dap/any.h
+@@ -18,6 +18,7 @@
+ #include "typeinfo.h"
  
- namespace expr
-@@ -79,4 +80,4 @@
-         const char* m_buffer;
-         const char* m_bufferEnd;
- 	};
--}
-\ No newline at end of file
-+}
+ #include <assert.h>
++#include <stdint.h>
+ 
+ namespace dap {
+ 
+diff --git a/libs/cppdap/include/dap/network.h b/libs/cppdap/include/dap/network.h
+index 9d14f6b..491f023 100644
+--- a/libs/cppdap/include/dap/network.h
++++ b/libs/cppdap/include/dap/network.h
+@@ -15,6 +15,7 @@
+ #ifndef dap_network_h
+ #define dap_network_h
+ 
++#include <cstdint>
+ #include <functional>
+ #include <memory>
+ 
+diff --git a/libs/cppdap/src/io.cpp b/libs/cppdap/src/io.cpp
+index 3ee972e..b4133e5 100644
+--- a/libs/cppdap/src/io.cpp
++++ b/libs/cppdap/src/io.cpp
+@@ -21,6 +21,7 @@
+ #include <cstring>  // strlen
+ #include <deque>
+ #include <mutex>
++#include <string>
+ 
+ namespace {
+ 
+diff --git a/src/SHADERed/Engine/AudioPlayer.h b/src/SHADERed/Engine/AudioPlayer.h
+index 7085699..0e2ed8d 100644
+--- a/src/SHADERed/Engine/AudioPlayer.h
++++ b/src/SHADERed/Engine/AudioPlayer.h
+@@ -2,6 +2,7 @@
+ #include <misc/miniaudio.h>
+ #include <string>
+ #include <string.h>
++#include <stdint.h>
+ 
+ namespace ed {
+ 	namespace eng {
