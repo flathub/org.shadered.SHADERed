@@ -15,10 +15,10 @@ finish-args:
 
 cleanup:
   - "*.a"
-  - "*.cmake"
-  - "*.hpp"
-  - "*.h"
   - "*.inl"
+  - /include
+  - /lib/cmake
+  - /lib/pkgconfig
 
 modules:
 
