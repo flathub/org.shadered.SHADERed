@@ -1,5 +1,13 @@
+commit 561c30ec4dbf65085a74082a5187595b55f54646
+Author: Hubert Figuière <hub@figuiere.net>
+Date:   Wed Jan 14 08:58:19 2026 -0500
+
+    Appstream fixes
+    
+    Signed-off-by: Hubert Figuière <hub@figuiere.net>
+
 diff --git a/Misc/Linux/org.shadered.SHADERed.appdata.xml b/Misc/Linux/org.shadered.SHADERed.appdata.xml
-index ca7185b..421fc7c 100644
+index ca7185b..eb1851a 100644
 --- a/Misc/Linux/org.shadered.SHADERed.appdata.xml
 +++ b/Misc/Linux/org.shadered.SHADERed.appdata.xml
 @@ -1,7 +1,7 @@
@@ -23,3 +31,11 @@ index ca7185b..421fc7c 100644
    <url type="donation">https://www.patreon.com/dfranx</url>
    <screenshots>
      <screenshot type="default" width="1920" height="1017">
+@@ -27,6 +29,7 @@
+   </screenshots>
+   <content_rating type="oars-1.1"/>
+   <releases>
++    <release version="1.5.6" date="2021-10-24"/>
+     <release version="1.5.4" date="2021-07-10"/>
+     <release version="1.5.3" date="2021-05-20"/>
+     <release version="1.5.2" date="2021-04-25"/>
