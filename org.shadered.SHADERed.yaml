@@ -1,6 +1,6 @@
 app-id: org.shadered.SHADERed
 runtime: org.freedesktop.Platform
-runtime-version: "21.08"
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: shadered
 rename-desktop-file: shadered.desktop
@@ -52,6 +52,7 @@ modules:
     config-opts:
       # Required for the Flatpak build to succeed.
       - -DDONT_LINK_FILESYSTEM=1
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
     sources:
       - type: git
         url: https://github.com/dfranx/SHADERed.git
@@ -61,6 +62,11 @@ modules:
         paths:
           - shadered-build.patch
           - shadered-appstream.patch
+      - type: patch
+        options:
+          - -d
+          - libs/assimp
+        path: assimp-std-header.patch
 
     post-install:
       # appstream file isn't installed and SVG is in an irrelevant location
