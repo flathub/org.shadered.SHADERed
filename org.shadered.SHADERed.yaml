@@ -57,14 +57,12 @@ modules:
         url: https://github.com/dfranx/SHADERed.git
         tag: v1.5.4
         commit: 6944cff2f1fc4d4ab72a4f741c2727713acfeb6d
-
-      # AppStream metadata wasn't updated in the tagged release, so take it from a fork for now.
-      - type: file
-        url: https://raw.githubusercontent.com/Calinou/SHADERed/a25be75303f38ab3bf7b80513ec2b065d773653d/Misc/Linux/org.shadered.SHADERed.appdata.xml
-        sha256: d5277eaf0b562ec24fff3c8a625d61447aaa5d1552b0b7c42222c667ee8ec9cd
       - type: patch
-        path: shadered-build.patch
+        paths:
+          - shadered-build.patch
+          - shadered-appstream.patch
 
-    build-commands:
-      # The icon and `.desktop` file are already installed by CMake, but they need to be renamed.
-      - install -Dm644 $FLATPAK_ID.appdata.xml -t /app/share/appdata/
+    post-install:
+      # appstream file isn't installed and SVG is in an irrelevant location
+      - install -Dm644 Misc/Linux/org.shadered.SHADERed.appdata.xml -t /app/share/appdata/
+      - install -Dm644 /app/share/pixmaps/shadered.svg -t /app/share/icons/hicolor/scalable/apps

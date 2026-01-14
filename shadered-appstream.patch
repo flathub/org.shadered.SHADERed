@@ -1,0 +1,25 @@
+diff --git a/Misc/Linux/org.shadered.SHADERed.appdata.xml b/Misc/Linux/org.shadered.SHADERed.appdata.xml
+index ca7185b..421fc7c 100644
+--- a/Misc/Linux/org.shadered.SHADERed.appdata.xml
++++ b/Misc/Linux/org.shadered.SHADERed.appdata.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright (c) 2019-2021 dfranx -->
+ <component type="desktop">
+-  <id>org.shadered.SHADERed.desktop</id>
++  <id>org.shadered.SHADERed</id>
+   <name>SHADERed</name>
+   <summary>Tool for creating and testing HLSL and GLSL shaders</summary>
+   <description>
+@@ -15,9 +15,11 @@
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>MIT</project_license>
+   <developer_name>dfranx</developer_name>
++  <launchable type="desktop-id">org.shadered.SHADERed.desktop</launchable>
+   <url type="homepage">https://github.com/dfranx/SHADERed</url>
+   <url type="help">https://shadered.org/docs/index.html</url>
+   <url type="bugtracker">https://github.com/dfranx/SHADERed/issues</url>
++  <url type="vcs-browser">https://github.com/dfranx/SHADERed</url>
+   <url type="donation">https://www.patreon.com/dfranx</url>
+   <screenshots>
+     <screenshot type="default" width="1920" height="1017">
